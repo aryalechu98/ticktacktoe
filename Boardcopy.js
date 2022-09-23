@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Square from './Square';
-import '../styles/root.scss'
+import Square from './Squarecopy';
+
 const Board = () => {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [isXNext, setIsXNext] = useState(false);
@@ -20,7 +20,7 @@ const Board = () => {
       });
     });
 
-    setIsXNext(!isXNext)
+    setIsXNext(prev => !prev);
   };
 
   const renderSquare = position => {
