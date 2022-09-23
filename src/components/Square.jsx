@@ -2,7 +2,7 @@ import React from 'react'
 
 const Square = ({value}) => {
   return (
-    <button>{value}</button>
+    <button className='square'>{value}</button>
   )
 }
 
