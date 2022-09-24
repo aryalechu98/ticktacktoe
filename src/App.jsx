@@ -46,7 +46,7 @@ setCurrentmove(prev=>prev + 1)
   }
 return(
 <div className="app">
-    <h1>TICK <span className="text-green">TACK</span> TOE</h1>
+    <h1>TIC <span className="text-green">TAC</span> TOE</h1>
     <StatusMeassage winner={winner} current={current}/>
     <Board board={current.board} handleSquareClick={handleSquareClick}
     winningSquares={winningSquares}
