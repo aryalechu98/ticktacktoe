@@ -46,13 +46,15 @@ setCurrentmove(prev=>prev + 1)
   }
 return(
 <div className="app">
-    <h1>TICK TACK TOE</h1>
+    <h1>TICK <span className="text-green">TACK</span> TOE</h1>
     <StatusMeassage winner={winner} current={current}/>
     <Board board={current.board} handleSquareClick={handleSquareClick}
     winningSquares={winningSquares}
     />
-    <button onClick={resetHnadler}>Start new game</button>
+    <button className={`btn-reset ${winner ? 'active':''}`} onClick={resetHnadler}>Start new game</button>
+    <h2 style={{fontWeight:'normal'}}>Current game History</h2>
     <History history={history} moveTo={moveTo} currentMove={currentMove}/>
+  <div className="bg-balls"></div>
   </div>
 )
 }
